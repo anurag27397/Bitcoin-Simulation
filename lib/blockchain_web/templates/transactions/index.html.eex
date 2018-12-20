@@ -1,0 +1,30 @@
+<h2>Listing Transactions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Txn</th>
+      <th>From</th>
+      <th>To</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for transactions <- @transactions do %>
+    <tr>
+      <td><%= transactions.txn_id %></td>
+      <td><%= transactions.from %></td>
+      <td><%= transactions.to %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: transactions_path(@conn, :show, transactions), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: transactions_path(@conn, :edit, transactions), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: transactions_path(@conn, :delete, transactions), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Transactions", to: transactions_path(@conn, :new) %></span>

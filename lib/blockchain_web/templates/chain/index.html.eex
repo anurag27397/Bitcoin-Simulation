@@ -1,0 +1,35 @@
+<h2> User Chart </h2>
+<canvas id="myChart" width="400" height="400"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+<p>No of users: <%= @no_of_users %></p>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Users Count"],
+        datasets: [{
+            label: 'No. of Users',
+            data: [<%= @no_of_users %>],
+            backgroundColor: [
+                'rgba(25, 99, 132, 0.2)',
+
+            ],
+            borderColor: [
+                'rgba(180,99,132,1)',
+
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>

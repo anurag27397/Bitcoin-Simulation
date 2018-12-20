@@ -1,0 +1,23 @@
+<h2>Show Transactions</h2>
+
+<ul>
+
+  <li>
+    <strong>Txn:</strong>
+    <%= @transactions.txn_id %>
+  </li>
+
+  <li>
+    <strong>From:</strong>
+    <%= @transactions.from %>
+  </li>
+
+  <li>
+    <strong>To:</strong>
+    <%= @transactions.to %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: transactions_path(@conn, :edit, @transactions) %></span>
+<span><%= link "Back", to: transactions_path(@conn, :index) %></span>

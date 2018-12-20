@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="jumbotron">
+    <h3>Say Hello! to Bitcoin Simulation</h3>
+    <p>Transacting 150 from user 1 to user 2. Initially User 2 had 0 balance </p>
+
+    <p><p>User 1 Balance: <%= 0.0 %></p></p>
+    <p><p>User 2 Balance: <%= @user2bal %></p></p>
+  </div>
+  <p></p>
+  <p></p>
+</div>

@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h2>Hello <%= @user %></h2>
+  <h2>Your Balance is  :<%= @balance %></h2>
+
+</div>
+
+
+
+
+
+
